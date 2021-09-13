@@ -1,6 +1,5 @@
 import { createGlobalStyle } from "styled-components";
-
-//import Suprema from "./components/platforms/fonts/Futura.ttf";
+import Roboto from "./components/fonts/Roboto.ttf";
 
 
 const GlobalStyles = createGlobalStyle`
@@ -10,12 +9,10 @@ const GlobalStyles = createGlobalStyle`
     font-family: 'Inter', sans-serif;
   }
 
-
+  @font-face {
+    font-family: 'Roboto';
+    src: local('Roboto'), url(${Roboto}) format('truetype');
+  }
 `;
 
 export default GlobalStyles;
-
-/*@font-face {
-    font-family: 'Suprema';
-    src: local('Suprema'), url(${Suprema}) format('truetype');
-  }*/
