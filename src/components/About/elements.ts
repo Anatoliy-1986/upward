@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import { device } from "../../config/device";
-import { Wrapper } from "../shared";
+
 
 export const Header = styled.div`
   display: flex;
@@ -61,11 +61,6 @@ export const Button = styled.button<{ secondary?: boolean }>`
   @media ${device.tablet} {
     margin: 15px 15px;
     border: 1px solid #202020;
-  }
-`;
-
-export const Concerning = styled(Wrapper)`
-  @media ${device.tablet} {
   }
 `;
 
@@ -195,7 +190,6 @@ export const Article = styled.div`
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
-
   @media ${device.tablet} {
     border-left: none;
   }
@@ -207,7 +201,10 @@ export const Processing = styled.div`
   flex-wrap: wrap;
   max-width: 600px;
   border-bottom: 1px solid #202020;
-  padding: 26.5px 15px;
+  padding: 25px 15px;
+  @media ${device.tablet} {
+    border-bottom: none;
+  }
 `;
 
 export const Buttonprocessing = styled.button`

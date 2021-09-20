@@ -14,10 +14,11 @@ type TFlexBLock = {
 };
 
 export const Container = styled.div<TFlexBLock>`
+max-width: 1440px;
   background: ${({ background }) => background || "#ffffff;"};
   position: relative;
   box-sizing: border-box;
-  margin: 0;
+  margin: 0 auto;
   padding: 0;
 `;
 

@@ -1,9 +1,8 @@
 import React from "react";
 import { useState } from "react";
 import upword from "./images/upword.png";
-import { Container, ButtonGeneral } from "../shared";
+import { Container, ButtonGeneral, Wrapper } from "../shared";
 import {
-  Concerning,
   Header,
   Button,
   Title,
@@ -106,7 +105,7 @@ function About() {
         <Button secondary>Log in</Button>
         <Button>Start learning</Button>
       </Header>
-      <Concerning align="none" padding="0" justify="none" wrap="wrap">
+      <Wrapper align="none" padding="0 0 96px" justify="none" wrap="wrap">
         <Information>
           <Title>Become a //super// learner</Title>
           <Description>
@@ -201,7 +200,7 @@ function About() {
             </Theory>
           </Article>
         </Publication>
-      </Concerning>
+      </Wrapper>
     </Container>
   );
 }
