@@ -1,15 +1,23 @@
 import styled from "styled-components";
 import { device } from "../../config/device";
-import { Wrapper } from "../shared";
 
-export const Covering = styled(Wrapper)`
+export const Covering = styled.div`
+  display: grid;
+  grid-template-areas: "Сhallenge Learning";
+  grid-template-columns: 50% 50%;
+  margin: 0 auto;
+  box-sizing: border-box;
+  max-width: 1340px;
   @media ${device.tablet} {
+    display: flex;
+    flex-wrap: wrap;
     justify-content: center;
     align-items: center;
   } ;
 `;
 
 export const Сhallenge = styled.div`
+  grid-area: Сhallenge;
   max-width: 720px;
   position: relative;
   box-sizing: border-box;
@@ -170,6 +178,7 @@ export const Subtitle = styled.div`
 `;
 
 export const Learning = styled.div`
+  grid-area: Learning;
   display: flex;
   flex-direction: column;
   width: 325px;
@@ -202,7 +211,7 @@ export const Fasterbutton = styled.button<{ margin?: any }>`
   padding: 0 10px;
   text-decoration: none;
   cursor: pointer;
-  margin: ${({ margin }) => margin};
+  margin: 0;
   @media ${device.tablet} {
     margin: 15px 0;
   }

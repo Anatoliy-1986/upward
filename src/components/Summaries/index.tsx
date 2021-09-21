@@ -1,6 +1,6 @@
 import React from "react";
 import { useState } from "react";
-import { Container, Wrapper, ButtonGeneral } from "../shared";
+import { Container, ButtonGeneral } from "../shared";
 import {
   Covering,
   Сhallenge,
@@ -41,18 +41,18 @@ const blocks = [
 function Summaries() {
   const [modalActive, setModalActive] = useState(false);
 
-  function sendEmail() {
+  function sendModal() {
     setModalActive(false);
   }
 
   return (
     <Container background="#202020">
-      <Covering align="none" padding="0" justify="none" wrap="wrap">
+      <Covering>
         <Сhallenge>
           <ModalConteiner
             opacity={modalActive ? "1" : "0"}
             pointer={modalActive ? "all" : "none"}
-            onClick={sendEmail}
+            onClick={sendModal}
           >
             <ModalContent
               transform={modalActive ? "scale(1)" : "scale(0.5)"}
@@ -65,7 +65,7 @@ function Summaries() {
                 </Сiphereye>
               </Sidebar>
               <List>
-                <Hidebutton onClick={sendEmail}></Hidebutton>
+                <Hidebutton onClick={sendModal}></Hidebutton>
                 {blocks.map((item, id) => (
                   <div key={item.id}>
                     <Section>{item.section}</Section>
@@ -76,7 +76,7 @@ function Summaries() {
               </List>
             </ModalContent>
           </ModalConteiner>
-          <Fasterbutton margin="0 220px" onClick={() => setModalActive(true)}>
+          <Fasterbutton onClick={() => setModalActive(true)}>
             {" "}
             Let`s read{" "}
           </Fasterbutton>
